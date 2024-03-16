@@ -6,32 +6,39 @@ body{
     margin:0;
     padding:0;
     background-color: rgb(248, 248, 224);
-    font-size: 20px;
+    font-family: sans-serif 'poppins';
 }
-nav ul{
-    list-style: none;
+section{
+    position:relative;
+    width:100%;
+    min-height: 100vh;
+    display:flex;
+    justify-content: flex-start;
+    background-color: antiquewhite;
 }
-nav a{
-    text-decoration: none;
-}
-nav{
-background-color: white;
-box-shadow: 0 5px 10px gray;
-}
-.nav i:hover{
-color:black;
-}
-.navs a{
+header{
+    position: relative;
+    top:0;
+    z-index: 0;
+    position:fixed;
+    width:100%;
+    padding:20px 100px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
     color:#f8a5a5;
-    padding-left:20%;
 }
-.navs{
-    height:0;
-    overflow:hidden;
-    transition:all 0.3s linear;
+header .navigation ul{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    padding:30px;
+    gap:40px;
 }
-.show-menu{
-    height: 10rem;
+a{
+    text-decoration: none;
+    color:#f69292;
 }
 .logo{
     display:flex;
@@ -39,36 +46,40 @@ color:black;
     justify-content: space-between;
     padding:1rem;
 }
-.nav i{
+label{
     display:none;
 }
-@media (min-width:800px){
-.container{
-    max-width:1000px;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
-    padding:1rem;
+label i:hover{
+    color:#d26c6c
 }
-.logo {
-    padding: 0;
-  }
-  .i {
-    display: none;
-  }
+.show-menu{
+    transform: translateY(-200%) !important;
+}
 
-  .navs {
-    height: auto;
-    display: flex;
+@media (max-width:1000px){
+ .nav-list{
+    /* position:fixed; */
+    top:167px;
+    left:0;
+    background-color:  white;
+    width:100%;
+    padding:10px 0 25px;
+    flex-direction:column;
+    align-items:center;
+    row-gap:10px;
+}
+  label {
+    display: block;
+    font-size: 25px;
+    cursor:pointer;
+    transition:0.3s;
+    transition-property: color;
   }
-
-  .navs a {
-    padding: 0;
-    margin: 0 0.5rem;
-  }
-  .navs a:hover {
-    padding: 0;
-    background: transparent;
+  header .navigation ul{
+    flex-direction:column;
+    align-items:center;
+    row-gap:20px;
+    transform:translateY(118%);
+    padding:30px 100px;
   }
 }
