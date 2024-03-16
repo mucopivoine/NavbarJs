@@ -15,6 +15,7 @@ section{
     display:flex;
     justify-content: flex-start;
     background-color: antiquewhite;
+    min-width: 500px;
 }
 header{
     position: relative;
@@ -40,12 +41,6 @@ a{
     text-decoration: none;
     color:#f69292;
 }
-.logo{
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
-    padding:1rem;
-}
 label{
     display:none;
 }
@@ -58,7 +53,7 @@ label i:hover{
 
 @media (max-width:1000px){
  .nav-list{
-    /* position:fixed; */
+    display:none;
     top:167px;
     left:0;
     background-color:  white;
